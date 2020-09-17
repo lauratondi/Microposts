@@ -42,12 +42,13 @@ class UI {
     // Insert alert div
     container.insertBefore(div, posts);
 
-    //   Timeou
+    //   Timeouy
     setTimeout(() => {
       this.clearAlert();
     }, 3000);
   }
 
+  // Clear alert
   clearAlert() {
     const currentAlert = document.querySelector('.alert');
 
@@ -56,9 +57,17 @@ class UI {
     }
   }
 
+  // Clear fields
   clearFields() {
     this.titleInput.value = '';
     this.bodyInput.value = '';
+  }
+
+  // Fill form
+  fillForm(data) {
+    this.titleInput.value = data.title;
+    this.bodyInput.value = data.body;
+    this.idInput.value = data.id;
   }
 }
 
